@@ -1,0 +1,13 @@
+---
+version: '3.6'
+
+services:
+  truenas-system-docs:
+    container_name: truenas-system-docs
+    image: truenas-system-docs:latest
+    build:
+      context: ..
+      dockerfile: ./docsify/Dockerfile
+    ports:
+    - 6007:80
+    restart: unless-stopped
