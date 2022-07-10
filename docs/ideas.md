@@ -10,4 +10,6 @@
 
 ## Ideas
 
-- Nothing.
+- GPU Isolation and Gaming VM.
+- iSCSI Service.
+- S3 Service.

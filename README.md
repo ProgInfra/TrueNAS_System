@@ -40,19 +40,31 @@ We will use **TrueNAS Scale** based on **Debian** as main operating system, we h
 
 1) First of all you need a **machine** to build this **server**, choose and build your server with this project : [Server Build](https://proginfra.gitlab.io/server_build/#/)
 2) With your machine, you can now install the **operating system** : **[TrueNAS Scale](https://www.truenas.com/truenas-scale/)**. You need to install the system with a **USB Boot Key**, download the iso on the official website and see this [documentations](https://progdevlab.gitlab.io/dyntools/#/docs/global/boot) to create this Key.
-3) [Configure TrueNAS](./docs/configure.md).
-4) [Configure Storage](./docs/storage.md).
-5) [Configure Backup](./docs/backup.md).
-6) [Configure Permissions with ACL and users](./docs/permissions.md).
-7) [Configure SMB and NFS Share](./docs/shares.md).
-8) Create some [Virtual Machine](./docs/vm.md) if you want.
-9) Create some [Container](./docs/container.md) if you want.
-10) [What you can do now ?](./docs/next.md).
+3) To install **TrueNAS**, you need also to check in your **BIOS** if you have **Virtualization** and **WakeOnLan** activated (If you try it with **VirtualBox**, you need to use **fixed size** for each **disk** and **Bridged Adapter** for the **network**).
+   1) Enter "1" to enter in the install setup
+   2) Select "1 Install/Upgrade"
+   3) Press **SPACE** to select one or two drive to install the system on it and press **ENTER** (two drive can give you an high availability system installation !)
+   4) Enter a password : **BE CAREFUL** because the keybord is in **QWERTY** by default
+   5) Choose your boot type
+   6) Wait for the finish of the installation
+   7) Reboot and eject the installation media
+   8) Wait the final installation and configuration process
+   9) Now you can access the TrueNAS Admin Panel with the IP displayed on the terminal.
+4) [Configure TrueNAS](./docs/configure.md).
+5) [Configure Storage](./docs/storage.md).
+6) [Configure Backup](./docs/backup.md).
+7) [Configure Permissions with ACL and users](./docs/permissions.md).
+8) [Configure SMB and NFS Share](./docs/shares.md).
+9) [What you can do now ?](./docs/next.md).
+10) Create some [Virtual Machine](./docs/vm.md) if you want.
+11) Create some [Container](./docs/container.md) if you want.
+12) Configure [Domain](./docs/domain.md) if you want.
+13) Configure [VPN](./docs/vpn.md) if you want.
 
 ### Server Access
 
-- **SSH Access** : USER@192.168.X.X
-  - **Username** : USER
+- **SSH Access** : root@192.168.X.X
+  - **Username** : root
   - **Password** : You have defined it !
 - [TrueNAS Web UI](http://192.168.X.X) : Same credentials as SSH !
 
@@ -64,9 +76,11 @@ We will use **TrueNAS Scale** based on **Debian** as main operating system, we h
 - [Backup](./docs/backup.md)
 - [Permissions](./docs/permissions.md)
 - [Shares](./docs/shares.md)
+- [Next](./docs/next.md)
 - [Virtual Machine](./docs/vm.md)
 - [Container](./docs/container.md)
-- [Next](./docs/next.md)
+- [Domain](./docs/domain.md)
+- [VPN](./docs/vpn.md)
 
 ## Development
 

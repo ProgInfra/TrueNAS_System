@@ -6,8 +6,15 @@
 
 - [TrueNAS System : Next](#truenas-system--next)
   - [Table Of Contents](#table-of-contents)
-  - [TODO](#todo)
+  - [What you can do now ?](#what-you-can-do-now-)
 
-## TODO
+## What you can do now ?
 
-TODO
+Now you have a good overall server, you can do whatever you want with this server and more.
+
+Some extra documentations here :
+
+- [Configure Virtual Machine](./vm.md) if you want.
+- [Configure Container](./container.md) if you want.
+- [Configure Domain](./domain.md) if you want.
+- [Configure VPN](./vpn.md) if you want.
