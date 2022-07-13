@@ -1,4 +1,4 @@
-* [Home](/)
+* [TrueNAS System](/)
 * [Configure](./docs/configure.md)
 * [Storage](./docs/storage.md)
 * [Backup](./docs/backup.md)
