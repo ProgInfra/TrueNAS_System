@@ -53,6 +53,7 @@ With TrueNAS you need to configure two network interfaces, one for the internet 
 2) Go to **Global Configuration**
    1) Change the **hostname** if you want
    2) You can add some **DNS Server**
+   3) Add the IPv4 Default Gateway (192.168.1.1 in most case)
 3) Click on the first interface : **enpXsX** and uncheck DHCP and IPv6 and click on Apply
 4) Add a new interface :
    1) Type : **Bridge**

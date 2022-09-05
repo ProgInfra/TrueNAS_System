@@ -26,9 +26,9 @@ First configure **SMB Server** :
 Next you can configure **SMB Server** :
 
 1) Go to **Shares**
-2) Click on Add to configure a new shared folder.
+2) Click on **Add to configure** a new **shared folder**.
 3) Choose the folder you want to share, a name if you want and the purpose (Default share parameters is good and multi user is good too, some options are available).
-4) Click on Save and you have your SMB Share Folder activated !
+4) Click on Save and you have your **SMB Share Folder activated** !
 
 You can now connect to your shared folders with the SMB protocol, here some [documentations](https://progdevlab.gitlab.io/dyntools/#/docs/linux/smb).
 
@@ -39,10 +39,18 @@ NFS is a great storage share protocol for Linux (or Windows Pro), but it's desig
 First configure NFS Server :
 
 1) Go to **Shares**
+2) Click on the **three vertical dots** on the left of the UNIX (NFS) Shares and click on Config Service.
+3) Check the **NFSv4** if you want the **version 4** of **NFS**.
+4) Your **NFS server** is configured !
 
 Next you can configure NFS Server :
 
-1) TODO
+1) Go to **Shares**
+2) Click on **Add to configure** a new **shared folder**.
+3) Add the **folder / path** you want to **share**, a **description** if you want and some **options** (**networks** to limit the access to some specific networks like **192.168.1.0/24** and **hosts** to limit the access to some specific **hosts**).
+4) Click on **Advanced Options**
+5) Enter **root** in **Mapall User** (specific user to use by each client to get access to files)
+6) Click on Save and you have your **NFS Share Folder activated** !
 
 You can now connect to your shared folders with the NFS protocol, here some [documentations](https://progdevlab.gitlab.io/dyntools/#/docs/linux/nfs).
 

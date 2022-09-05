@@ -16,7 +16,7 @@ TODO TrueNAS vs Traefik
 
 ## Domain with TrueNAS
 
-TODO
+TODO https://gitlab.com/proginfra/royal_nas/-/blob/master/docs/domain.md
 
 ## Domain with Traefik
 

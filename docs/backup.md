@@ -13,6 +13,8 @@
   - [Cloud](#cloud)
     - [Backup to Cloud](#backup-to-cloud)
     - [Backup of Cloud](#backup-of-cloud)
+    - [Minio](#minio)
+  - [Duplicati](#duplicati)
   - [Next](#next)
 
 ## Description
@@ -63,6 +65,18 @@ TODO
 ### Backup of Cloud
 
 TODO
+
+### Minio
+
+TODO https://www.truenas.com/docs/scale/scaleuireference/apps/minioclustersscale/
+
+## Duplicati
+
+If you want, you can use **Duplicati** to **backup all** your file, but you need to have access to these files through a **SMB** or **NFS** Share, because we haven't the **permission** to get access to each files.
+
+To do this, you need to create a **VM** with **Docker** and the **Duplicati service** configured with **SMB** or **NFS** shares.
+
+You can also configure it with the container engine in **TrueNAS** but you have to setup each volume as **SMB** or **NFS** shares.
 
 ## Next
 
