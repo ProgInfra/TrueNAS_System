@@ -58,10 +58,9 @@ With TrueNAS you need to configure two network interfaces, one for the internet 
 4) Add a new interface :
    1) Type : **Bridge**
    2) Name : **br0**
-   3) **Check IPv6**
-   4) In Bridge Members add **enpXsX**
-   5) In IP Addresses add **192.168.1.X/24**
-   6) Apply it
+   3) In Bridge Members add **enpXsX**
+   4) In IP Addresses add **192.168.1.X/24**
+   5) Apply it
 5) **Test Changes** and go with the new IPv4 Address to confirm it's works !
 
 ## Next
