@@ -26,7 +26,7 @@ First of all, you have some config to do :
 2) Change the root Password if you want (Admin account).
 3) Go to **System Settings/General**
    1) Go to **GUI Settings**
-      1) Change **HTTP** Port to **8080**.
+      1) Change **HTTP** Port to **8000**.
       2) Change **HTTPS** Port to **8443**.
       3) Check **HTTP -> HTTPS Redirect** for better **security**.
       4) Uncheck **Crash reporting** and **Usage collection** if you want.
