@@ -25,7 +25,7 @@ First of all, you need to get a domain name in a good provider :
 
 ## TrueNAS
 
-Next you have to connect your domain name on TrueNAS main interface :
+Next you have to connect your domain name on TrueNAS main interface : [Some Youtube Tutorial](https://www.youtube.com/watch?v=TJ5fDiDRcbU)
 
 1) First of all, edit your **root** user and add an email to it.
 2) Go to **Credentials/Certificates**.
@@ -41,7 +41,7 @@ Next you have to connect your domain name on TrueNAS main interface :
    5) Key Length : 2048
    6) Digest Algorithm : SHA256
    7) Certificate Subject : Fill it with your information
-   8) Subject Alternate Names : DATA.DOMAIN.NET
+   8) Subject Alternate Names : *.DOMAIN.NET (exemple : *.testy.net or *.games.testy.net)
    9) Next with default parameters and Save It
 5) Click on the key on your **csr** : Create ACME Certificate :
    1) Identifier : cert

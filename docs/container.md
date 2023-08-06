@@ -8,7 +8,7 @@
   - [Table Of Contents](#table-of-contents)
   - [Description](#description)
   - [Init Apps](#init-apps)
-  - [Add Community Catalogs](#add-community-catalogs)
+  - [Add Community Catalogs : TrueCharts](#add-community-catalogs--truecharts)
   - [Install Apps from Catalogs](#install-apps-from-catalogs)
   - [Create a new Custom Apps](#create-a-new-custom-apps)
   - [Manually Launch Docker Compose](#manually-launch-docker-compose)
@@ -29,7 +29,7 @@ First of all, you need to create a space to save all apps data :
 2) You need to **choose a pool for Apps**, choose a **data pool** for this.
 3) Click on Choose and **wait** for the engine to be installed.
 
-## Add Community Catalogs
+## Add Community Catalogs : TrueCharts
 
 With just the official catalogs, we have a few apps, but not a lot, so we need to install the community catalogs :
 
@@ -39,7 +39,7 @@ With just the official catalogs, we have a few apps, but not a lot, so we need t
    1) **Catalog Name** : **truecharts**
    2) **Force Create** : Unchecked
    3) **Repository** : https://github.com/truecharts/catalog
-   4) **Preferred Trains** : **stable**
+   4) **Preferred Trains** : **stable**, **enterprise**, **operators**
    5) **Branch** : **main**
 4) Wait the Catalogs to be loaded
 
@@ -50,6 +50,19 @@ If the apps you want is in the catalogs, you can install it :
 1) Go to **Apps**
 2) Click on **Available Applications** and click on **install** on the apps you want.
 3) Choose all **parameters** you want to setup your **apps**.
+4) **Application Name** :
+   1) **Application Name** : The name you want
+   2) **Version** : Choose the one you want
+5) **Networking and Services** :
+   1) **Service Type** : LoadBalancer to expose ports
+   2) **Port** : Choose the port you want to expose (ex: 3000 to get to app with http://192.168.1.X:3000)
+6) **Ingress** : If you have installed Traefik (to get url to access to service)
+   1) **Hosts** : Add one with the url you want : app.domain.net
+   2) **TLS Settings** : Add one with the TrueNAS Scale certificate you've generated
+7) **Resources and Devices** :
+   1) **CPU** : Choose the amount of CPU
+   2) **RAM** : Choose the amount of RAM
+8) Save it and launch your app.
 
 ## Create a new Custom Apps
 
