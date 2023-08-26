@@ -9,6 +9,7 @@
   - [Description](#description)
   - [Init Apps](#init-apps)
   - [Add Community Catalogs : TrueCharts](#add-community-catalogs--truecharts)
+  - [Install Traefik as main Ingress](#install-traefik-as-main-ingress)
   - [Install Apps from Catalogs](#install-apps-from-catalogs)
   - [Create a new Custom Apps](#create-a-new-custom-apps)
   - [Manually Launch Docker Compose](#manually-launch-docker-compose)
@@ -43,6 +44,30 @@ With just the official catalogs, we have a few apps, but not a lot, so we need t
    5) **Branch** : **main**
 4) Wait the Catalogs to be loaded
 
+## Install Traefik as main Ingress
+
+To use Traefik, you need to setup properly the [domain](./domain.md).
+
+> !!! Before install it, be careful to have port 80 and 443 changed by default on TrueNAS Admin Gui !!!
+
+1) Go to **Apps**
+2) Click on **Available Applications**, search "Traefik" and click on **install** on the app "Traefik Enterprise".
+3) **Application Name** :
+   1) **Application Name** : The name you want (ex: proxy)
+   2) **Version** : Choose the one you want (latest available)
+4) **Networking and Services** :
+   1) Main Entrypoint Configuration : Don't change the port 9000
+   2) web Entrypoint Configuration : Change 9080 to the port 80
+   3) websecure Entrypoints Configuration : Change 9443 to the port 443
+5) **Resources and Devices** :
+   1) **CPU** : Choose the amount of CPU (ex: 500m)
+   2) **RAM** : Choose the amount of RAM (ex: 1Gi)
+6) **Middlewares (OPTIONAL)** : Here you can add some middleware to use for some apps
+   1) **basicAuth** :
+      1) Name = app-auth (MUST BE IN LOWERCASE !)
+      2) Users = You can add some users if you want
+7) Save it and launch your Traefik Ingress.
+
 ## Install Apps from Catalogs
 
 If the apps you want is in the catalogs, you can install it :
@@ -56,7 +81,7 @@ If the apps you want is in the catalogs, you can install it :
 5) **Networking and Services** :
    1) **Service Type** : LoadBalancer to expose ports
    2) **Port** : Choose the port you want to expose (ex: 3000 to get to app with http://192.168.1.X:3000)
-6) **Ingress** : If you have installed Traefik (to get url to access to service)
+6) **Ingress** : If you have installed Traefik (to get url to access to service and HTTPS security)
    1) **Hosts** : Add one with the url you want : app.domain.net
    2) **TLS Settings** : Add one with the TrueNAS Scale certificate you've generated
 7) **Resources and Devices** :

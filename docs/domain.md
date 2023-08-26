@@ -16,12 +16,12 @@ First of all, you need to get a domain name in a good provider :
 1) Search a provider compatible with DNS Challenge here at [Traefik Documentation](https://doc.traefik.io/traefik/https/acme/#dnschallenge), for us we use [Cloudflare](https://www.cloudflare.com/fr-fr/products/registrar/).
 2) Buy a new Domain Name and register it with true information.
 3) Create new Tokens for our server : (Go to **My Profile/API Tokens**)
-   1) Traefik Custom Tokens (One with **Zone, Zone, Read** and one with **Zone, DNS, Edit**)
-   2) TrueNAS Custom Token (**Zone, Zone, Read** and **Zone, DNS, Edit**)
+   1) TrueNAS Custom Token (**Zone, Zone, Read** and **Zone, DNS, Edit**)
+   2) (ONLY IF YOU USE TRAEFIK MANUALLY) Traefik Custom Tokens (One with **Zone, Zone, Read** and one with **Zone, DNS, Edit**)
 4) Update DNS entries :
    1) Add a new entry : Type : A / Name : DATA.DOMAIN.NET / Content : 192.168.1.42 / No Proxy / TTL : Auto
    2) Add a new entry : Type : A / Name : *.DATA.DOMAIN.NET / Content : 192.168.1.42 / No Proxy / TTL : Auto
-   3) Add a new entry for each service you need : Type : A / Name : SERVICE.DATA.DOMAIN.NET / Content : 192.168.1.43 / No Proxy / TTL : Auto
+   3) (ONLY IF YOU USE TRAEFIK MANUALLY) Add a new entry for each service you need : Type : A / Name : SERVICE.DATA.DOMAIN.NET / Content : 192.168.1.43 / No Proxy / TTL : Auto
 
 ## TrueNAS
 
