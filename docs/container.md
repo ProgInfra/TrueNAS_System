@@ -13,6 +13,7 @@
   - [Install Apps from Catalogs](#install-apps-from-catalogs)
   - [Create a new Custom Apps](#create-a-new-custom-apps)
   - [Manually Launch Docker Compose](#manually-launch-docker-compose)
+  - [Documentations](#documentations)
 
 ## Description
 
@@ -82,7 +83,7 @@ If the apps you want is in the catalogs, you can install it :
    1) **Service Type** : LoadBalancer to expose ports
    2) **Port** : Choose the port you want to expose (ex: 3000 to get to app with http://192.168.1.X:3000)
 6) **Ingress** : If you have installed Traefik (to get url to access to service and HTTPS security)
-   1) **Hosts** : Add one with the url you want : app.domain.net
+   1) **Hosts** : Add one with the url you want : app.domain.net and add Path with / prefix
    2) **TLS Settings** : Add one with the TrueNAS Scale certificate you've generated
 7) **Resources and Devices** :
    1) **CPU** : Choose the amount of CPU
@@ -98,6 +99,27 @@ If you want, you can create your own apps, if it's not available in the main cat
 3) Choose all **parameters** you want to setup your **container**.
 4) Click on save and wait for it to be **created** !
 
+How to add Traefik support for a custom app : [External Service](https://truecharts.org/charts/stable/external-service/)
+
+1) You have already created a new custom app like above (you can also put traefik for just a redirection to another external app).
+2) Go to **Apps**
+3) Click on **Available Applications** and click on **install** on the app : **external-service**.
+4) **Application Name** : The name you want with -proxy if you want
+5) **Service Type** : External IP to connect to machine IP or External Name to connect to a domain name
+6) **External Service IP / Domainname** : IP of the machine (192.168.1.15) or domain of the service (app.domain.net)
+7) **Port Type** : HTTP, HTTPS, TCP, UDP (type of communication for your app)
+8) **Service Port** : External port of your service (ex : 8080)
+9) **Ingress** :
+   1) **Hosts** : Add one with the url you want : app.domain.net and add Path with / prefix
+   2) **TLS Settings** : Add one with the TrueNAS Scale certificate you've generated
+10) Save it and the app will be launch and stop, after that your config is done and you can access your app.
+11) Here an [example](https://truecharts.org/manual/SCALE/guides/truenas-web-gui-via-traefik) to activate **Traefik** for **TrueNAS Web GUI**
+
 ## Manually Launch Docker Compose
 
 It's **not a good idea**, but you can **launch manually** a **Docker Compose file**, just copy or create your file on your **TrueNAS Server**, go to the **Shell** and run a **Docker Compose command** with it.
+
+## Documentations
+
+- [Backup and Restore](https://truecharts.org/manual/SCALE/guides/backup-restore)
+- [Replace Default Certs Manager](https://truecharts.org/charts/enterprise/clusterissuer/how-to/)
